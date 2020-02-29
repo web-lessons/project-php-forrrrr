@@ -1,5 +1,7 @@
 <?php
+
 require_once 'template/header.php';
+require_once 'config/db.php';
 
 $products = array(
     0 => array(
@@ -51,8 +53,12 @@ $products = array(
         'url' => '/'
     )
 );
+
+$query = 'SELECT * FROM `products`';
+$result = mysqli_query($mysqli, $query);
+
+var_dump($result);
 ?>
-hello
 <section class="mt-4">
     <div class="row md-3">
 
